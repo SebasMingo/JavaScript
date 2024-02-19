@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>13-Objetos</h1>
+    <script>
+        let a = new String("Hola");
+        //console.log(a)
+
+        const b = {}
+        console.log(b);
+
+        const c = new Object();
+        console.log(c);
+
+        /*dentro de un objeto a las variables se le van a llamar atributos/propiedades y a las funciones se les llama métodos*/
+
+        const sebastian = {
+            nombre: "Sebastian",
+            apellido: "Mingo",
+            edad: 26,
+            pasatiempos: ["Correr", "Hacer ejercicio", "clases"],
+            soltero: false,
+            contacto: {
+                email: "sebastianmingo10@gmail.com",
+                twitter: "Sebas_Mingo",
+                celular: "0981234567",
+            },
+            saludar:function(){
+                console.log('Hola :)')
+
+            },
+            decirMiNombre: function () {
+                console.log("Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años. ")
+            }
+        }
+
+        console.log(sebastian);
+        console.log(sebastian["nombre"]);
+        console.log(sebastian["apellido"]);
+        console.log(sebastian.nombre);
+        console.log(sebastian.apellido);
+        console.log(sebastian.edad);
+        console.log(sebastian.pasatiempos);
+        console.log(sebastian.pasatiempos[1]);
+        console.log(sebastian.contacto.twitter);
+        sebastian.saludar();
+        sebastian.decirMiNombre();
+
+        console.log(Object.keys(sebastian))
+        console.log(Object.values(sebastian));
+        console.log(sebastian.hasOwnProperty("nombre"));
+        console.log(sebastian.hasOwnProperty("nacimineto"));
+
+
+
+
+
+    </script>
+</body>
+</html>
